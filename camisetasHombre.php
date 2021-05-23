@@ -22,17 +22,17 @@ $datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=1');
             <div class="camisetas">';
         $count = 1;
 
-        foreach($datos as $camisetasH){
+        foreach($datos as $camisetashombre){
             echo '<div class="row">
                 <div class="col">
                     <div class="main-camiseta" >';
                         echo "<img  src='images/FotosHombres/Camisetas/camiseta{$count}.jpg' alt='camisetas-img1' /> ";                          
                         echo ' <div class="row marginsetup">
                             <div class="col-8">';
-                            echo "<p class='camiseta-title camiseta-text'>{$camisetasH['nombre']}</p>";
+                            echo "<p class='camiseta-title camiseta-text'>{$camisetasHombre['nombre']}</p>";
                             echo '</div>
                             <div class="col-4">';
-                                echo "<p class='camiseta-price camiseta-text'>{$camisetasH['precio']}€</p>";
+                                echo "<p class='camiseta-price camiseta-text'>{$camisetasHombre['precio']}€</p>";
                                 echo '
                             </div>
                         </div>     
