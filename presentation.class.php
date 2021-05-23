@@ -7,7 +7,7 @@ class View{
 <head>
 <meta charset=\"utf-8\">
 <link rel=\"stylesheet\" type=\"text/css\" href=\"estilos.css\">
-<script src=\"scripts.js\" defer></script>
+<script src=\"scripts.js\"defer></script>
 <title>$title</title>
 </head>
 <body>";
