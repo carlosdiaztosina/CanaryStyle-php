@@ -3,7 +3,7 @@ class DB{
     private static $connection=null;
     public static function get(){
         if(self::$connection === null){
-            self::$connection = new PDO('sqlite:' . __DIR__ . '/datos.db');
+            self::$connection = new PDO('sqlite:basedatos.db');
             self::$connection->exec('PRAGMA foreign_keys = ON;');
             self::$connection->exec('PRAGMA encoding="UTF-8";');
             self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

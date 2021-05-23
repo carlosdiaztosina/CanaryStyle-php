@@ -1,5 +1,5 @@
 <?php
-include_once 'business.class.php';
+include_once 'busines.class.php';
 class View{
     public static function  start($title){
         $html = "<!DOCTYPE html>
@@ -17,35 +17,49 @@ class View{
 
     public static function navigation(){
         $user = User::getLoggedUser();
+        echo '<header>
+        <div class="nav-wrap">
+            <div class="nav-block"></div>
+            <a href="index.php">
+                <img src="images/Captura111.PNG" alt="logo" class="logo">
+            </a>
+            <a href="index.php" class="logo-name">
+                CanaryStyle
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="align">Hombre<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="camisetasHombre.php">Camisetas</a></li>
+                            <li><a href="pantalonesHombre.php">Pantalones</a></li>
+                            <li><a href="chaquetasHombre.php">Chaquetas</a></li>
+                            <li><a href="bañadoresHombre.php">Bañadores</a></li>
+                            <li><a href="complementosHombre.php">Complementos</a></li>
+                            
+                        </ul></li>
+                    <li><a href="#" class="align">Mujer<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="camisetasMujer.php">Camisetas</a></li>
+                            <li><a href="pantalonesMujer.php">Pantalones</a></li>
+                            <li><a href="chaquetasMujer.php">Chaquetas</a></li>
+                            <li><a href="bikinisMujer.php">Bikinis</a></li>
+                            <li><a href="complementosMujer.php">Complementos</a></li>
+                        </ul></li>
+                    <li><a href="carrito.php">Carrito</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    ';
+                     
         if($user == false) {
-            echo "<a href='login.php'>Iniciar sesión</a>";
-            echo "<a href='registrar.php'>Registrarse</a>";
+            echo '<li><a href="login.php">Login</a></li>';
         } else {
-            $nombre = $user['nombre'];
-            echo "<h3>Bienvenido, {$nombre}</h3>";
-            echo "<a href='logout.php'>Cerrar sesión</a><br>";
-            echo '<nav>';
-            echo '<ul>';
-            switch($user['tipo']) {
-                case 1:
-                    echo '<li><a href="verEspecialistas.php">Ver especialistas</a></li>'
-                        . '<li><a href="CrudUsuarios.php">CRUD USUARIOS</a></li>';
-                    
-                   break;
-                case 2:
-                   echo '<li><a href="verPacientes.php">Ver pacientes</a></li>';
-                   break;
-                case 3:
-                    echo '<li><a href="añadirHistorial.php">Añadir historial</a></li>';
-                    break;
-                case 4:
-                    echo '<li><a href="especialistas.php">Ver especialistas</a></li>'
-                       . '<li><a href="historial.php">Ver historial</a></li>';
-                    break;
-            }
-            echo '</ul>';       
-            echo '</nav>';
+            
+            echo "<li><a href='logout.php'>Cerrar sesión</a></li>";
+           
         }
+        echo' </ul>
+        </nav>
+        </div>
+        </header>  ';  
         
     }
 

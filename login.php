@@ -52,7 +52,7 @@ echo'
         <div class="formulario">
             <h1>Iniciar Sesión</h1>
             <form action="comprobarLogin.php" method="post">
-                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="cuenta" placeholder="Introduzca cuenta" required>
                 <input type="password" name="password" placeholder="Contraseña" required>
                 <input type="submit" value="Iniciar Sesión">
             </form>
