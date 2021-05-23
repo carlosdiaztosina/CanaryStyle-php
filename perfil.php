@@ -27,7 +27,12 @@ echo "<h1 class='perfil'> Bienvenido {$nombre} </h1>
             <div>
               <label> Direccion: {$value['direccion']} </label>
             </div>
-            <input type='button' value='Modificar datos' onclick=''>";
+            <a href='modificar.php'><input type='button' value='Modificar datos'></a>";
+    }
+
+    if($_SESSION['user']['tipo'] == 0){
+        echo "<a href='gestionarUsuarios.php'><input type='button' value='Gestionar usuarios'></a>
+              <a href='gestionarArticulos.php'><input type='button'value='Gestionar articulos'></a>";
     }
 
 
