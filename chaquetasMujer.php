@@ -28,10 +28,10 @@ echo '<h1 class="camisetastitulo">Camisetas</h1>
                     echo "<img  src='images\FotosMujeres\Sudaderas\sudadera{$count}.jpg' alt='camisetas-img1' /> ";                          
                     echo ' <div class="row marginsetup">
                         <div class="col-8">';
-                        echo "<p class='camiseta-title camiseta-text'>{$camisetasMujer['nombre']}</p>";
+                        echo "<p class='camiseta-title camiseta-text'>{$camisetashombre['nombre']}</p>";
                         echo '</div>
                         <div class="col-4">';
-                            echo "<p class='camiseta-price camiseta-text'>{$camisetasMujer['precio']}€</p>";
+                            echo "<p class='camiseta-price camiseta-text'>{$camisetashombre['precio']}€</p>";
                             echo '
                         </div>
                     </div>     
