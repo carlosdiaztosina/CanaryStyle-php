@@ -15,7 +15,7 @@ echo'
     <script>
         $(document).ready(function () {
             var id = new URLSearchParams(window.location.search);
-            getDatos(12,0,id.get("id"))
+            getDatos(6,0,id.get("id"))
             //cargarProducto(10,0,id.get("id"));
         });
     </script>

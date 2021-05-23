@@ -86,7 +86,7 @@ echo'
             //cargarCatalogo(1,fila)
         }
         getDatos(6,fila)
-        interval = setInterval(getDatos, 10000, 1,fila)
+        interval = setInterval(getDatos, 10000,1,fila)
     }
 
     function myFunctionY(y) {
@@ -95,10 +95,10 @@ echo'
             //cargarCatalogo(1,fila)
         } else {
             fila = 1     
-            //cargarCatalogo(1,fila)
+            //cargarCatalogo(6,fila)
         }
         getDatos(6,fila)
-        interval = setInterval(getDatos, 1,1,fila)
+        interval = setInterval(getDatos, 10000,1,fila)
     }
     
     var x = window.matchMedia("(min-width : 890px) and (max-width : 1310px)")
