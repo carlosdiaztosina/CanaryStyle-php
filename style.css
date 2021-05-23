@@ -111,9 +111,8 @@ article > aside.portada-aside > img {
 nav{
     position: relative;
     float:right;
-    max-width: 70%;
-
-    
+    max-width: 50%;
+    width: 35%;
 }
 
 nav ul {
@@ -128,14 +127,13 @@ nav ul {
 
 
 nav li {
-    margin-right: 10%;
+    margin-right: 8%;
 }
 
 nav a{
     text-decoration: none;
     color: white;
     font-size: 20px;
-   
 }
 .camisetastitulo{
     font-family: 'Red Hat Display', sans-serif;
@@ -473,7 +471,6 @@ p:hover > a:hover {
 .contenedor-form textarea,
 .contenedor-form input[type="name"],
 .contenedor-form input[type="email"],
-.contenedor-form input[type="number"],
 .contenedor-form input[type="password"],
 .contenedor-form input[type="text"] {
     outline: none;
@@ -494,7 +491,6 @@ p:hover > a:hover {
 
 .contenedor-form input[type="name"]:focus,
 .contenedor-form input[type="text"]:focus,
-.contenedor-form input[type="number"]:focus,
 .contenedor-form input[type="password"]:focus,
 .contenedor-form input[type="email"]:focus {
     border-bottom: 4px solid #0075d9;
@@ -580,4 +576,14 @@ p:hover > a:hover {
 }
 .form input[type="submit"]:hover {
     background: rgba(0, 117, 217, 0.7);
+}
+
+/* Pagina de Perfil */
+
+.perfil{
+    margin-left:10px;
+}
+
+.letras-perfil{
+    font-size: 20px;
 }

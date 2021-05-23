@@ -1,16 +1,18 @@
 <?php
 include_once 'business.class.php';
-class View{
+class View {
     public static function  start($title){
-        $html = "<!DOCTYPE html>
-<html>
-<head>
-<meta charset=\"utf-8\">
-<link rel=\"stylesheet\" type=\"text/css\" href=\"estilos.css\">
-<script src=\"scripts.js\"defer></script>
-<title>$title</title>
-</head>
-<body>";
+        $html = "<html lang='eng'>
+            <head>
+                <meta charset='UTF-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+                <link href='https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap' rel='stylesheet'>
+                <link rel='stylesheet' href='style.css'>
+                <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+                <title>$title</title>
+            </head>
+            <body>";
         User::session_start();
         echo $html;
     }
@@ -51,19 +53,9 @@ class View{
                      
         if($user == false) {
             echo '<li><a href="login.php">Login</a></li>';
-            echo "<li><a href=''></a></li>";
-            echo "<li><a href=''></a></li>";
-            echo "<li><a href=''></a></li>";
-            echo "<li><a href=''></a></li>";
-            echo "<li><a href=''></a></li>";
         } else {
             echo "<li><a href='perfil.php'>Perfil</a></li>";
-            echo "<li><a href='logout.php'>Logout</a></li>";
-            echo "<li><a href=''></a></li>";
-            echo "<li><a href=''></a></li>";
-            echo "<li><a href=''></a></li>";
-            echo "<li><a href=''></a></li>";
-            echo "<li><a href=''></a></li>";
+            echo "<li><a href='logout.php'>Cerrar sesión</a></li>";
            
         }
         echo' </ul>

@@ -15,28 +15,33 @@ echo '
 </head>
 <body>';
 View::navigation();
-    echo '<h1 class="camisetastitulo">Chaquetas</h1>
+$datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=3');
+    echo '<h1 class="camisetastitulo">Camisetas</h1>
         <div class="center-camisetas">
-            <div id="chaquetasHombreId" class="camisetas">
-            </div>
-        </div>
+            <div class="camisetas">';
+        $count = 1;
 
-    <footer>
-        <div class="footer-img">
-            <img src="images/instagram.png" alt="instagram" class="instagram">
-            <img src="images/maps.png" alt="maps" class="maps">
-            <img src="images/phone.png" alt="phone" class="phone">
-            <img src="images/twitter.png" alt="twitter" class="twitter">
+        foreach($datos as $camisetashombre){
+            echo '<div class="row">
+                <div class="col">
+                    <div class="main-camiseta" >';
+                        echo "<img  src='images/FotosHombres/Camisetas/camiseta{$count}.jpg' alt='camisetas-img1' /> ";                          
+                        echo ' <div class="row marginsetup">
+                            <div class="col-8">';
+                            echo "<p class='camiseta-title camiseta-text'>{$camisetasHombre['nombre']}</p>";
+                            echo '</div>
+                            <div class="col-4">';
+                                echo "<p class='camiseta-price camiseta-text'>{$camisetasHombre['precio']}€</p>";
+                                echo '
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+            </div>';
+            $count++;
+        }
+        echo'
         </div>
-        <div class="footer-bottom">
-            <div class="footer-terms">
-                <a href="contacto.php">Contacto</a>
-                <a href="#">Términos y condiciones</a>
-            </div>
-
-            <div class="footer-copy">
-                © 2021 CanaryStyle
-            </div>
         </div>
     </footer>
     <script>

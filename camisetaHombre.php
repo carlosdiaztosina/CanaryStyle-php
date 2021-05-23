@@ -25,53 +25,34 @@ echo '
 
 <body>';
 View::navigation();
-    echo '<h1 class="tituloproducto"></h1>
-    <!-- Usamos bootstrap para el grid -->
-    <div class="row camiseta-row">
-        <div id="productoImg" class="col camiseta-img">
+$datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=1');
+    echo '<h1 class="camisetastitulo">Camisetas</h1>
+        <div class="center-camisetas">
+            <div class="camisetas">';
+        $count = 1;
 
-        </div>
-        <div class="col camiseta-data">
-            <div class="productosetup">
-                <div class="tallaproducto">
-                    <p>Talla:</p>
-                    <select name="menu">
-                        <option>S</option>
-                        <option>M</option> 
-                        <option>L</option>
-                        <option>XL</option>  
-                    </select>
+        foreach($datos as $camisetashombre){
+            echo '<div class="row">
+                <div class="col">
+                    <div class="main-camiseta" >';
+                        echo "<img  src='images/FotosHombres/Camisetas/camiseta{$count}.jpg' alt='camisetas-img1' /> ";                          
+                        echo ' <div class="row marginsetup">
+                            <div class="col-8">';
+                            echo "<p class='camiseta-title camiseta-text'>{$camisetasHombre['nombre']}</p>";
+                            echo '</div>
+                            <div class="col-4">';
+                                echo "<p class='camiseta-price camiseta-text'>{$camisetasHombre['precio']}€</p>";
+                                echo '
+                            </div>
+                        </div>     
+                    </div>
                 </div>
-                <div class="cantidadproducto">
-                    <p>Cantidad: </p>
-                    <input type="number" id="quantity" name="quantity" min="1" max="20" step="1" value="1">                
-                </div>
-                <div id="productoPrecio" class="precioproducto">
-                </div>
-            </div>
+            </div>';
+            $count++;
+        }
+        echo'
         </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <p>Los clientes también compran</p>
-            </div>
         </div>
-        <div class="row">
-            <div class="col hoverclientes">
-                <img src="images/FotosHombres/Pantalones/pantalon3.jpg" alt="pantalon-1">
-            </div>
-            <div class="col hoverclientes">
-                <img src="images/FotosHombres/Camisetas/camiseta4.jpg" alt="pizza-2">
-            </div>
-            <div class="col hoverclientes">
-                <img src="images/FotosMujeres/Sudaderas/sudadera1.jpg" alt="pizza-3">
-            </div>
-        </div>
-    </div>
-
-    </div>
 
     <footer>
         <div class="footer-img">
