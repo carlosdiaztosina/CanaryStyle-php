@@ -1,5 +1,5 @@
 <?php
-include_once 'busines.class.php';
+include_once 'business.class.php';
 class View{
     public static function  start($title){
         $html = "<!DOCTYPE html>
@@ -53,7 +53,9 @@ class View{
             echo '<li><a href="login.php">Login</a></li>';
         } else {
             echo "<li><a href='perfil.php'>Perfil</a></li>";
-            echo "<li><a href='logout.php'>Cerrar sesión</a></li>";
+            echo "<li><a href='logout.php'>Logout</a></li>";
+            echo "<li><a href=''></a></li>";
+            echo "<li><a href=''></a></li>";
            
         }
         echo' </ul>

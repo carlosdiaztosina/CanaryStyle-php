@@ -111,12 +111,13 @@ article > aside.portada-aside > img {
 nav{
     position: relative;
     float:right;
-    max-width: 50%;
-    width: 35%;
+    max-width: 70%;
+
+    
 }
 
 nav ul {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     height: 60px;
@@ -127,13 +128,14 @@ nav ul {
 
 
 nav li {
-    margin-right: 8%;
+    margin-right: 20%;
 }
 
 nav a{
     text-decoration: none;
     color: white;
     font-size: 20px;
+   
 }
 .camisetastitulo{
     font-family: 'Red Hat Display', sans-serif;
