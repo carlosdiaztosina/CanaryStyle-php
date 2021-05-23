@@ -20,6 +20,7 @@ echo '
         });
     </script>
 </head>
+
 <body>
     <header>
         <div class="nav-wrap">
