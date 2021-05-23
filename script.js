@@ -27,7 +27,7 @@ function getDatos(show,max,id){
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             let datos = JSON.parse(this.responseText)
-            if(show != 11){
+            if(show !== 11 && show != 2){
                 cargarJSON(datos,show,max)
                 console.log(datos)
             }else{
@@ -87,12 +87,12 @@ function cargarJSON(json,show,max){
         }
         div += `
         <div class="col">
-            <div class="main-camiseta"  onclick="window.location='${item.html}'">
+            <div class="main-camiseta"  onclick="window.location='${item.php}'">
                 <img  src="${item.source}" alt="${item.nombre}" />
                 
                 <div class="row marginsetup">
                     <div class="col-8">
-                        <p class='camiseta-text camiseta-title'><a href="${item.html}">${item.nombre}</a> </p>
+                        <p class='camiseta-text camiseta-title'><a href="${item.php}">${item.nombre}</a> </p>
                     </div>
                     <div class="col-4">
                         <p class="camiseta-price camiseta-text">${item.precio}</p>
