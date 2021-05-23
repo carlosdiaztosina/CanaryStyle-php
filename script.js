@@ -191,10 +191,3 @@ function postAjax(url, params, success) {
     ajax.send(params);
     return ajax;
 }
-
-
-
-function editarArticulo(){
-    document.getElementById('seccion1').contentEditable = 'true';
-    document.getElementById('seccion1').designMode='on';
-}
