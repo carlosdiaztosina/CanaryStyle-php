@@ -25,7 +25,7 @@ $datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=4');
             echo '<div class="row">
                 <div class="col">
                     <div class="main-camiseta" >';
-                        echo "<img  src='images/FotosHombres/Camisetas/camiseta{$count}.jpg' alt='camisetas-img1' /> ";                          
+                        echo "<img  src='images/FotosHombres/Bañadores/bañador{$count}.jpg' alt='camisetas-img1' /> ";                          
                         echo ' <div class="row marginsetup">
                             <div class="col-8">';
                             echo "<p class='camiseta-title camiseta-text'>{$camisetasHombre['nombre']}</p>";
