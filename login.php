@@ -29,9 +29,12 @@ View::navigation();
         
         <div class="formulario">
             <h1>Registrarse</h1>
-            <form action="comprobarNuevo.php" method="post">
-                <input type="name" name="name" placeholder="Introduzca su nombre" required>
+            <form action="comprobarRegistro.php" method="post">
+                <input type="text" name="cuenta" placeholder="Introduzca su cuenta" required>
+                <input type="text" name="nombre" placeholder="Introduzca su nombre" required>
                 <input type="email" name="email" placeholder="Introduzca su Email" required>
+                <input type="text" name="direccion" placeholder="Introduzca su dirección" required>
+                <input type="number" name="telefono" placeholder="Introduzca su teléfono" required>
                 <input type="password" name="password" placeholder="Introduzca una contraseña" required>
                 <input type="submit" value="Registrarse">
             </form>
