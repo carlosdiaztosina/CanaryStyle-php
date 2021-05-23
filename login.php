@@ -51,7 +51,7 @@ echo'
         
         <div class="formulario">
             <h1>Iniciar Sesión</h1>
-            <form action="" method="post">
+            <form action="comprobarLogin.php" method="post">
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Contraseña" required>
                 <input type="submit" value="Iniciar Sesión">
@@ -60,7 +60,7 @@ echo'
         
         <div class="formulario">
             <h1>Registrarse</h1>
-            <form action="" method="post">
+            <form action="comprobarNuevo.php" method="post">
                 <input type="name" name="name" placeholder="Introduzca su nombre" required>
                 <input type="email" name="email" placeholder="Introduzca su Email" required>
                 <input type="password" name="password" placeholder="Introduzca una contraseña" required>
