@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+echo '
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -108,4 +109,4 @@
         y.addListener(myFunctionY)   
     </script>
 </body>
-</html>
+</html> ';
