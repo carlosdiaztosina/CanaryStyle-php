@@ -19,8 +19,9 @@ class View {
     public static function imgtobase64($img){
         $b64 = base64_encode($img);
         $signature = substr($b64, 0, 3);
+        $mime = null;
         if ( $signature == '/9j') {
-            $mime = 'data:image/jpg;base64,';
+            $mime = 'data:images/jpg;base64,';
         } else if ( $signature == 'iVB') {
             $mime = 'data:image/png;base64,';
         }
@@ -62,9 +63,17 @@ class View {
                      
         if($user == false) {
             echo '<li><a href="login.php">Login</a></li>';
+            echo "<li><a></a></li>";
+            echo "<li><a></a></li>";
+            echo "<li><a></a></li>";
+            echo "<li><a></a></li>";
         } else {
             echo "<li><a href='perfil.php'>Perfil</a></li>";
             echo "<li><a href='logout.php'>Cerrar sesión</a></li>";
+            echo "<li><a></a></li>";
+            echo "<li><a></a></li>";
+            echo "<li><a></a></li>";
+            echo "<li><a></a></li>";
            
         }
         echo' </ul>
