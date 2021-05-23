@@ -1,10 +1,10 @@
 <?php
-    include_once busines.class.php; 
+    include_once 'busines.class.php'; 
 
     if(USER::getLoggedUser() != false){
         echo "<h3>Error, sesión ya iniciada</h3>";
     }else{
-        $usuario = $_POST['email'];
+        $usuario = $_POST['cuenta'];
         $pass = $_POST['password'];
         
         

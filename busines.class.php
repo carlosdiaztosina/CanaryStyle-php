@@ -1,4 +1,5 @@
 <?php
+include_once 'data-access.class.php';
 class User{
     public static function session_start(){
         if(session_status () === PHP_SESSION_NONE){
@@ -23,3 +24,4 @@ class User{
         unset($_SESSION['user']);
         return true;
     }
+}
