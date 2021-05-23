@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+echo '
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>CanaryStyle | HOME</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>CanaryStyle</title>
+    <script>
+        $(document).ready(function () {
+            var id = new URLSearchParams(window.location.search);
+            getDatos(11,0,id.get("id"))
+            //cargarProducto(10,0,id.get("id"));
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -29,7 +38,7 @@
                             <li><a href="pantalonesHombre.html">Pantalones</a></li>
                             <li><a href="chaquetasHombre.html">Chaquetas</a></li>
                             <li><a href="bañadoresHombre.html">Bañadores</a></li>
-                            <li><a href="complementoshombre.html">Complementos</a></li>
+                            <li><a href="complementosHombre.html">Complementos</a></li>
                             
                         </ul></li>
                     <li><a href="#" class="align">Mujer<i class="fa fa-caret-down"></i></a>
@@ -47,11 +56,54 @@
             </nav>
         </div>
     </header>
-        <h1 class="camisetastitulo">Pantalones</h1>
-        <div class="center-camisetas">
-            <div id="pantalonesHombreId" class="camisetas">
+    <h1 class="tituloproducto"></h1>
+    <!-- Usamos bootstrap para el grid -->
+    <div class="row camiseta-row">
+        <div id="productoImg" class="col camiseta-img">
+
+        </div>
+        <div class="col camiseta-data">
+            <div class="productosetup">
+                <div class="tallaproducto">
+                    <p>Talla:</p>
+                    <select name="menu">
+                        <option>S</option>
+                        <option>M</option> 
+                        <option>L</option>
+                        <option>XL</option>  
+                    </select>
+                </div>
+                <div class="cantidadproducto">
+                    <p>Cantidad: </p>
+                    <input type="number" id="quantity" name="quantity" min="1" max="20" step="1" value="1">                
+                </div>
+                <div id="productoPrecio" class="precioproducto">
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Los clientes también compran</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col hoverclientes">
+                <img src="images/FotosHombres/Pantalones/pantalon3.jpg" alt="pantalon-1">
+            </div>
+            <div class="col hoverclientes">
+                <img src="images/FotosHombres/Camisetas/camiseta4.jpg" alt="pizza-2">
+            </div>
+            <div class="col hoverclientes">
+                <img src="images/FotosMujeres/Sudaderas/sudadera1.jpg" alt="pizza-3">
+            </div>
+        </div>
+    </div>
+
+    </div>
+
     <footer>
         <div class="footer-img">
             <img src="images/instagram.png" alt="instagram" class="instagram">
@@ -64,46 +116,13 @@
                 <a href="contacto.html">Contacto</a>
                 <a href="#">Términos y condiciones</a>
             </div>
-        
+    
             <div class="footer-copy">
-                © 2021 CanaryStyle
+                © 2020 CanaryStyle
             </div>
         </div>
     </footer>
-    <script>
-        var interval;
-        var fila = 3;
-        function myFunction(x) {
-            if (x.matches) { // If media query matches
-                fila = 1
-                //cargarCatalogo(1,fila)
-            } else {
-                fila = 2
-                getDatos(2,fila)
-                //cargarCatalogo(1,fila)
-            }
-            getDatos(2,fila)
-            interval = setInterval(getDatos, 10000, 1,fila)
-        }
+
     
-        function myFunctionY(y) {
-            if (y.matches) { // If media query matches
-                fila = 0
-                //cargarCatalogo(1,fila)
-            } else {
-                fila = 1     
-                //cargarCatalogo(1,fila)
-            }
-            getDatos(2,fila)
-            interval = setInterval(getDatos, 10,1,fila)
-        }
-        
-        var x = window.matchMedia("(min-width : 890px) and (max-width : 1310px)")
-        var y = window.matchMedia("(max-width: 889px)")
-        myFunction(x) // Call listener function at run time
-        x.addListener(myFunction) // Attach listener function on state changes
-        myFunctionY(y)
-        y.addListener(myFunctionY)   
-    </script>
 </body>
-</html>
+</html> ';
