@@ -15,34 +15,34 @@ echo '
     <header>
         <div class="nav-wrap">
             <div class="nav-block"></div>
-            <a href="index.html">
+            <a href="index.php">
                 <img src="images/Captura111.PNG" alt="logo" class="logo">
             </a>
-            <a href="index.html" class="logo-name">
+            <a href="index.php" class="logo-name">
                 CanaryStyle
             </a>
             <nav>
                 <ul>
                     <li><a href="#" class="align">Hombre<i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="camisetasHombre.html">Camisetas</a></li>
-                            <li><a href="pantalonesHombre.html">Pantalones</a></li>
-                            <li><a href="chaquetasHombre.html">Chaquetas</a></li>
-                            <li><a href="bañadoresHombre.html">Bañadores</a></li>
-                            <li><a href="complementosHombre.html">Complementos</a></li>
+                            <li><a href="camisetasHombre.php">Camisetas</a></li>
+                            <li><a href="pantalonesHombre.php">Pantalones</a></li>
+                            <li><a href="chaquetasHombre.php">Chaquetas</a></li>
+                            <li><a href="bañadoresHombre.php">Bañadores</a></li>
+                            <li><a href="complementosHombre.php">Complementos</a></li>
                             
                         </ul></li>
                     <li><a href="#" class="align">Mujer<i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="camisetasMujer.html">Camisetas</a></li>
-                            <li><a href="pantalonesMujer.html">Pantalones</a></li>
-                            <li><a href="chaquetasMujer.html">Chaquetas</a></li>
-                            <li><a href="bikinisMujer.html">Bikinis</a></li>
-                            <li><a href="complementosMujer.html">Complementos</a></li>
+                            <li><a href="camisetasMujer.php">Camisetas</a></li>
+                            <li><a href="pantalonesMujer.php">Pantalones</a></li>
+                            <li><a href="chaquetasMujer.php">Chaquetas</a></li>
+                            <li><a href="bikinisMujer.php">Bikinis</a></li>
+                            <li><a href="complementosMujer.php">Complementos</a></li>
                         </ul></li>
-                    <li><a href="carrito.html">Carrito</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="carrito.php">Carrito</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="login.php">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -62,7 +62,7 @@ echo '
     </div>
     <div class="footer-bottom">
         <div class="footer-terms">
-            <a href="contacto.html">Contacto</a>
+            <a href="contacto.php">Contacto</a>
             <a href="#">Términos y condiciones</a>
         </div>
 
