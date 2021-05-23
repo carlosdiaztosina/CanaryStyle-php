@@ -4,7 +4,7 @@
         "id": "CPH1",
         "precio": "16,60€",
         "source": "images/FotosHombres/Complementos/complemento1.jpg",
-        "html": "camiseta.html?id=CPH1"
+        "php": "camiseta.php?id=CPH1"
         
     },
     {
@@ -12,7 +12,7 @@
         "id": "CPH2",
         "precio": "22,00€",
         "source": "images/FotosHombres/Complementos/complemento2.jpg",
-        "html": "camiseta.html?id=CPH2"
+        "php": "camiseta.php?id=CPH2"
         
     },
     {
@@ -20,7 +20,7 @@
         "id": "CPH3",
         "precio": "23,99€",
         "source": "images/FotosHombres/Complementos/complemento3.jpg",
-        "html": "camiseta.html?id=CPH3"
+        "php": "camiseta.php?id=CPH3"
         
     },
     {
@@ -28,7 +28,7 @@
         "id": "CPH4",
         "precio": "12,00€",
         "source": "images/FotosHombres/Complementos/complemento4.jpg",
-        "html": "camiseta.html?id=CPH4"
+        "php": "camiseta.php?id=CPH4"
         
     },
     {
@@ -36,7 +36,7 @@
         "id": "CPH5",
         "precio": "7,50€",
         "source": "images/FotosHombres/Complementos/complemento5.jpg",
-        "html": "camiseta.html?id=CPH5"
+        "php": "camiseta.php?id=CPH5"
         
     },
     {
@@ -44,7 +44,7 @@
         "id": "CPH6",
         "precio": "19,99€",
         "source": "images/FotosHombres/Complementos/complemento6.jpg",
-        "html": "camiseta.html?id=CPH6"
+        "php": "camiseta.php?id=CPH6"
         
     }
 ]
