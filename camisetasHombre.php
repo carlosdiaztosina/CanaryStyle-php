@@ -19,11 +19,11 @@ View::navigation();
 $datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=1');
     echo '<h1 class="camisetastitulo">Camisetas</h1>
         <div class="center-camisetas">
-            <div class="row">';
+            <div class="camisetas">';
         $count = 1;
 
         foreach($datos as $camisetashombre){
-            echo '<div class="camisetas">
+            echo '<div class="row">
                 <div class="col">
                     <div class="main-camiseta" >';
                         $img=View::imgtobase64($camisetashombre['imagen']);
