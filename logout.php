@@ -14,6 +14,6 @@
             echo "<h3>Error al cerrar sesion</h3>";
             echo "<a href='logOut.php'>Volver a intentar</a>";
         }
+        header('Location: index.php');
     }
-    echo "<a href='index.php'>Volver al inicio</a>";
     

@@ -1,4 +1,6 @@
 <?php
+include_once 'presentation.class.php';
+include_once 'data-access.class.php';
 echo'
 <html lang="en">
 <head>
@@ -11,43 +13,9 @@ echo'
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>CanaryStyle | CHAQUETAS</title>
 </head>
-<body>
-    <header>
-        <div class="nav-wrap">
-            <div class="nav-block"></div>
-            <a href="index.php">
-                <img src="images/Captura111.PNG" alt="logo" class="logo">
-            </a>
-            <a href="index.php" class="logo-name">
-                CanaryStyle
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#" class="align">Hombre<i class="fa fa-caret-down"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="camisetasHombre.php">Camisetas</a></li>
-                            <li><a href="pantalonesHombre.php">Pantalones</a></li>
-                            <li><a href="chaquetasHombre.php">Chaquetas</a></li>
-                            <li><a href="bañadoresHombre.php">Bañadores</a></li>
-                            <li><a href="complementosHombre.php">Complementos</a></li>
-                            
-                        </ul></li>
-                    <li><a href="#" class="align">Mujer<i class="fa fa-caret-down"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="camisetasMujer.php">Camisetas</a></li>
-                            <li><a href="pantalonesMujer.php">Pantalones</a></li>
-                            <li><a href="chaquetasMujer.php">Chaquetas</a></li>
-                            <li><a href="bikinisMujer.php">Bikinis</a></li>
-                            <li><a href="complementosMujer.php">Complementos</a></li>
-                        </ul></li>
-                    <li><a href="carrito.php">Carrito</a></li>
-                    <li><a href="contacto.php">Contacto</a></li>
-                    <li><a href="login.php">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-        <h1 class="camisetastitulo">Bañadores</h1>
+<body>';
+View::navigation();
+    echo '<h1 class="camisetastitulo">Bañadores</h1>
         <div class="center-camisetas">
             <div id="bikinisMujerId" class="camisetas">                      
             </div>

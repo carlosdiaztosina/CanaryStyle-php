@@ -1,4 +1,6 @@
 <?php
+include_once 'presentation.class.php';
+include_once 'data-access.class.php';
 echo'
 <html lang="en">
 <head>
@@ -11,9 +13,9 @@ echo'
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>CanaryStyle | HOME</title>
 </head>
-<body>
-    
-        <h1 class="camisetastitulo">Complementos</h1>
+<body>';
+View::navigation();
+    echo '<h1 class="camisetastitulo">Complementos</h1>
         <div class="center-camisetas">
             <div id="complementosMujerId" class="camisetas">
             </div>
