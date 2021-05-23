@@ -19,7 +19,7 @@ View::navigation();
 $datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=2');
     echo '<h1 class="camisetastitulo">Camisetas</h1>
         <div class="center-camisetas">
-            <div class="camisetas">';
+            <div class="row">';
         $count = 1;
 
         foreach($datos as $camisetashombre){
