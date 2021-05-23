@@ -4,7 +4,7 @@
         "id": "BM1",
         "precio": "15,99€",
         "source": "images/FotosMujeres/Bañadores/bañador1.jpg",
-        "html": "camiseta.html?id=BM1"
+        "php": "camiseta.php?id=BM1"
         
     },
     {
@@ -12,7 +12,7 @@
         "id": "BM2",
         "precio": "10,99€",
         "source": "images/FotosMujeres/Bañadores/bañador2.jpg",
-        "html": "camiseta.html?id=BM2"
+        "php": "camiseta.php?id=BM2"
         
     },
     {
@@ -20,7 +20,7 @@
         "id": "BM3",
         "precio": "8,99€",
         "source": "images/FotosMujeres/Bañadores/bañador3.jpg",
-        "html": "camiseta.html?id=BM3"
+        "php": "camiseta.php?id=BM3"
         
     },
     {
@@ -28,7 +28,7 @@
         "id": "BM4",
         "precio": "12,99€",
         "source": "images/FotosMujeres/Bañadores/bañador4.jpg",
-        "html": "camiseta.html?id=BM4"
+        "php": "camiseta.php?id=BM4"
         
     },
     {
@@ -36,7 +36,7 @@
         "id": "BM5",
         "precio": "21,99€",
         "source": "images/FotosMujeres/Bañadores/bañador5.jpg",
-        "html": "camiseta.html?id=BM5"
+        "php": "camiseta.php?id=BM5"
         
     },
     {
@@ -44,7 +44,7 @@
         "id": "BM6",
         "precio": "7,99€",
         "source": "images/FotosMujeres/Bañadores/bañador6.jpg",
-        "html": "camiseta.html?id=BM6"
+        "php": "camiseta.php?id=BM6"
         
     }
 ]
