@@ -16,12 +16,35 @@ echo '
 </head>
 <body>';
 View::navigation();
+$datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=1');
     echo '<h1 class="camisetastitulo">Camisetas</h1>
         <div class="center-camisetas">
-            
-            <div id="camisetasHombreId" class="camisetas" >
-            </div>
+            <div class="camisetas">';
+        $count = 1;
+
+        foreach($datos as $camisetashombre){
+            echo '<div class="row">
+                <div class="col">
+                    <div class="main-camiseta" >';
+                        echo "<img  src='images/FotosHombres/Camisetas/camiseta{$count}.jpg' alt='camisetas-img1' /> ";                          
+                        echo ' <div class="row marginsetup">
+                            <div class="col-8">';
+                            echo "<p class='camiseta-title camiseta-text'>{$camisetasHombre['nombre']}</p>";
+                            echo '</div>
+                            <div class="col-4">';
+                                echo "<p class='camiseta-price camiseta-text'>{$camisetasHombre['precio']}€</p>";
+                                echo '
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+            </div>';
+            $count++;
+        }
+        echo'
         </div>
+        </div>
+
     <footer>
         <div class="footer-img">
             <img src="images/instagram.png" alt="instagram" class="instagram">
@@ -39,8 +62,8 @@ View::navigation();
                 © 2021 CanaryStyle
             </div>
         </div>
-    </footer>
-    <script>
+    </footer>';
+    /*<script>
         var interval;
         var fila = 3;
         function myFunction(x) {
@@ -75,6 +98,7 @@ View::navigation();
         x.addListener(myFunction) // Attach listener function on state changes
         myFunctionY(y)
         y.addListener(myFunctionY)   
-    </script>
+    </script>*/
+    echo'
 </body>
 </html> ';
