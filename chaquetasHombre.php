@@ -22,7 +22,7 @@ $datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=3');
         $count = 1;
 
         foreach($datos as $camisetashombre){
-            echo '<div class="row">
+            echo '<div class="camisetas">
                 <div class="col">
                     <div class="main-camiseta" >';
                     $img=View::imgtobase64($camisetashombre['imagen']);

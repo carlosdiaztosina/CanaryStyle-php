@@ -22,7 +22,7 @@ echo '<h1 class="camisetastitulo">Camisetas</h1>
     $count = 1;
 
     foreach($datos as $camisetashombre){
-        echo '<div class="row">
+        echo '<div class="camisetas">
             <div class="col">
                 <div class="main-camiseta" >';
                 $img=View::imgtobase64($camisetashombre['imagen']);
