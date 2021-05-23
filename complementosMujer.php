@@ -25,7 +25,7 @@ echo '<h1 class="camisetastitulo">Camisetas</h1>
         echo '<div class="row">
             <div class="col">
                 <div class="main-camiseta" >';
-                    echo "<img  src='images\FotosMujeres\Complementos\camplemento{$count}.jpg' alt='camisetas-img1' /> ";                          
+                    echo "<img  src='images\FotosMujeres\Complementos\complemento{$count}.jpg' alt='camisetas-img1' /> ";                          
                     echo ' <div class="row marginsetup">
                         <div class="col-8">';
                         echo "<p class='camiseta-title camiseta-text'>{$camisetashombre['nombre']}</p>";

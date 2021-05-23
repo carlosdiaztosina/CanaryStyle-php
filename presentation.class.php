@@ -16,7 +16,16 @@ class View {
         User::session_start();
         echo $html;
     }
-
+    public static function imgtobase64($img){
+        $b64 = base64_encode($img);
+        $signature = substr($b64, 0, 3);
+        if ( $signature == '/9j') {
+            $mime = 'data:image/jpg;base64,';
+        } else if ( $signature == 'iVB') {
+            $mime = 'data:image/png;base64,';
+        }
+        return $mime . $b64;
+    }
     public static function navigation(){
         $user = User::getLoggedUser();
         echo '<header>

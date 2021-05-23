@@ -471,6 +471,7 @@ p:hover > a:hover {
 .contenedor-form textarea,
 .contenedor-form input[type="name"],
 .contenedor-form input[type="email"],
+.contenedor-form input[type="number"],
 .contenedor-form input[type="password"],
 .contenedor-form input[type="text"] {
     outline: none;
@@ -491,6 +492,7 @@ p:hover > a:hover {
 
 .contenedor-form input[type="name"]:focus,
 .contenedor-form input[type="text"]:focus,
+.contenedor-form input[type="number"]:focus,
 .contenedor-form input[type="password"]:focus,
 .contenedor-form input[type="email"]:focus {
     border-bottom: 4px solid #0075d9;
