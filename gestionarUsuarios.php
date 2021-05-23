@@ -17,11 +17,11 @@ echo "<table>
 
 foreach($res as $usuarios){
 
-    echo "<tr>
+    echo "<tr id='{$usuarios['id']}'>
             <th> {$usuarios['cuenta']} </th>
             <th> {$usuarios['nombre']} </th>
-            <th> Editar </th>
-            <th> Borrar </th>
+            <th><input type='button' onclick='editarUsuarios({$usuarios['id']})' value='Editar'></th>
+            <th><input type='button' onclick='borrarUsuarios({$usuarios['id']})' value='Eliminar'></th>
         </tr>";
 }
 

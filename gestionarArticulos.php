@@ -10,7 +10,7 @@ $res = $datos-> fetchAll();
 
 View::navigation();
 
-echo "<table>
+echo " <table>
         <tr>
             <th> Articulo </th>
             <th> Nombre </th>
@@ -18,11 +18,11 @@ echo "<table>
 
 foreach($res as $articulo){
 
-    echo "<tr>
+    echo "<tr id='{$articulo['id']}'>
             <th> {$articulo['id']} </th>
             <th> {$articulo['nombre']} </th>
-            <th> Editar </th>
-            <th> Borrar </th>
+            <th> <a href='modificarA.php'><input type='button' value='Editar'></a></th>
+            <th> <input type='button' onclick='borrarArticulo({$articulo['id']})' value='Eliminar'></th>
         </tr>";
 }
 

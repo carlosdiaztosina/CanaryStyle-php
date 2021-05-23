@@ -134,3 +134,67 @@ function cargarJSON(json,show,max){
     }
     
 }
+
+
+function borrarArticulo(idArticulo){
+    if(!confirm("¿Seguro que desea eliminar el articullo?")){
+        return;
+    }
+    postAjax("borrarArticulo.php", JSON.stringify({id: idArticulo}),
+    function(data){
+        res = JSON.parse(data);
+        if(res.deleted==true){
+            document.getElementById(idArticulo).remove();
+        }
+    });
+}
+
+function postAjax(url, params, success) {
+    
+    var ajax = new XMLHttpRequest();
+    ajax.open("POST",url);
+    ajax.onreadystatechange=function(){
+        if (ajax.readyState==4 && ajax.status==200){
+            success(ajax.responseText);
+        }
+    };
+    ajax.setRequestHeader("Content-type","application/json;charset=UTF-8");
+    ajax.send(params);
+    return ajax;
+}
+
+
+
+function borrarUsuarios(idUsuario){
+    if(!confirm("¿Seguro que desea eliminar al usuario?")){
+        return;
+    }
+    postAjax("borrarUsuario.php", JSON.stringify({id: idUsuario}),
+    function(data){
+        res = JSON.parse(data);
+        if(res.deleted==true){
+            document.getElementById(idUsuario).remove();
+        }
+    });
+}
+
+function postAjax(url, params, success) {
+    
+    var ajax = new XMLHttpRequest();
+    ajax.open("POST",url);
+    ajax.onreadystatechange=function(){
+        if (ajax.readyState==4 && ajax.status==200){
+            success(ajax.responseText);
+        }
+    };
+    ajax.setRequestHeader("Content-type","application/json;charset=UTF-8");
+    ajax.send(params);
+    return ajax;
+}
+
+
+
+function editarArticulo(){
+    document.getElementById('seccion1').contentEditable = 'true';
+    document.getElementById('seccion1').designMode='on';
+}
