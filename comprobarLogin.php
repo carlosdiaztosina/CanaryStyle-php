@@ -14,6 +14,7 @@
             echo "<h3>Error al iniciar sesion</h3>";
             echo "<a href='login.php'>Volver a intentar</a>";
         }
+        header('Location: index.php');
     }
-    echo "<a href='index.php'>Volver al inicio</a>";
+    
     
