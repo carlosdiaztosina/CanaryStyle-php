@@ -15,11 +15,34 @@ echo'
 </head>
 <body>';
 View::navigation();
-    echo '<h1 class="camisetastitulo">Chaquetas</h1>
-        <div class="center-camisetas">
-            <div id="chaquetasMujerId" class="camisetas">                            
+$datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=8');
+echo '<h1 class="camisetastitulo">Camisetas</h1>
+    <div class="center-camisetas">
+        <div class="camisetas">';
+    $count = 1;
+
+    foreach($datos as $camisetashombre){
+        echo '<div class="row">
+            <div class="col">
+                <div class="main-camiseta" >';
+                    echo "<img  src='images\FotosMujeres\Sudaderas\sudadera{$count}.jpg' alt='camisetas-img1' /> ";                          
+                    echo ' <div class="row marginsetup">
+                        <div class="col-8">';
+                        echo "<p class='camiseta-title camiseta-text'>{$camisetasMujer['nombre']}</p>";
+                        echo '</div>
+                        <div class="col-4">';
+                            echo "<p class='camiseta-price camiseta-text'>{$camisetasMujer['precio']}€</p>";
+                            echo '
+                        </div>
+                    </div>     
+                </div>
             </div>
-        </div>
+        </div>';
+        $count++;
+    }
+    echo'
+    </div>
+    </div>
     
 
 
