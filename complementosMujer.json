@@ -4,7 +4,7 @@
         "id": "CPM1",
         "precio": "12,60€",
         "source": "images/FotosMujeres/Complementos/complemento1.jpg",
-        "html": "camiseta.html?id=CPM1"
+        "php": "camiseta.php?id=CPM1"
         
     },
     {
@@ -12,7 +12,7 @@
         "id": "CPM2",
         "precio": "4,50€",
         "source": "images/FotosMujeres/Complementos/complemento2.jpg",
-        "html": "camiseta.html?id=CPM2"
+        "php": "camiseta.php?id=CPM2"
         
     },
     {
@@ -20,7 +20,7 @@
         "id": "CPM3",
         "precio": "15,99€",
         "source": "images/FotosMujeres/Complementos/complemento3.jpg",
-        "html": "camiseta.html?id=CPM3"
+        "php": "camiseta.php?id=CPM3"
         
     },
     {
@@ -28,7 +28,7 @@
         "id": "CPM4",
         "precio": "20,00€",
         "source": "images/FotosMujeres/Complementos/complemento4.jpg",
-        "html": "camiseta.html?id=CPM4"
+        "php": "camiseta.php?id=CPM4"
         
     },
     {
@@ -36,7 +36,7 @@
         "id": "CPM5",
         "precio": "24,00€",
         "source": "images/FotosMujeres/Complementos/complemento5.jpg",
-        "html": "camiseta.html?id=CPM5"
+        "php": "camiseta.php?id=CPM5"
         
     },
     {
@@ -44,7 +44,7 @@
         "id": "CPM6",
         "precio": "13,99€",
         "source": "images/FotosMujeres/Complementos/complemento6.jpg",
-        "html": "camiseta.html?id=CPM6"
+        "php": "camiseta.php?id=CPM6"
         
     }
 ]

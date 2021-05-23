@@ -4,7 +4,7 @@
         "id": "CHM1",
         "precio": "18,99€",
         "source": "images/FotosMujeres/Sudaderas/sudadera1.jpg",
-        "html": "camiseta.html?id=CHM1"
+        "php": "camiseta.php?id=CHM1"
         
     },
     {
@@ -12,7 +12,7 @@
         "id": "CHM2",
         "precio": "12,99€",
         "source": "images/FotosMujeres/Sudaderas/sudadera2.jpg",
-        "html": "camiseta.html?id=CHM2"
+        "php": "camiseta.php?id=CHM2"
         
     },
     {
@@ -20,7 +20,7 @@
         "id": "CHM3",
         "precio": "19,99€",
         "source": "images/FotosMujeres/Sudaderas/sudadera3.jpg",
-        "html": "camiseta.html?id=CHM3"
+        "php": "camiseta.php?id=CHM3"
         
     },
     {
@@ -28,7 +28,7 @@
         "id": "CHM4",
         "precio": "25,99€",
         "source": "images/FotosMujeres/Sudaderas/sudadera4.jpg",
-        "html": "camiseta.html?id=CHM4"
+        "php": "camiseta.php?id=CHM4"
         
     },
     {
@@ -36,7 +36,7 @@
         "id": "CHM5",
         "precio": "16,99€",
         "source": "images/FotosMujeres/Sudaderas/sudadera5.jpg",
-        "html": "camiseta.html?id=CHM5"
+        "php": "camiseta.php?id=CHM5"
         
     },
     {
@@ -44,7 +44,7 @@
         "id": "CHM6",
         "precio": "29,99€",
         "source": "images/FotosMujeres/Sudaderas/sudadera6.jpg",
-        "html": "camiseta.html?id=CHM6"
+        "php": "camiseta.php?id=CHM6"
         
     }
 ]
