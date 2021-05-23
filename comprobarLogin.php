@@ -4,7 +4,7 @@
     if(USER::getLoggedUser() != false){
         echo "<h3>Error, sesión ya iniciada</h3>";
     }else{
-        $usuario = $_POST['nombre'];
+        $usuario = $_POST['email'];
         $pass = $_POST['password'];
         
         
