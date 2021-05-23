@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+echo'
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,50 +9,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Canary | HOME</title>
+    <title>CanaryStyle | CHAQUETAS</title>
 </head>
 <body>
     <header>
         <div class="nav-wrap">
             <div class="nav-block"></div>
-            <a href="index.html">
+            <a href="index.php">
                 <img src="images/Captura111.PNG" alt="logo" class="logo">
             </a>
-            <a href="index.html" class="logo-name">
+            <a href="index.php" class="logo-name">
                 CanaryStyle
             </a>
             <nav>
                 <ul>
                     <li><a href="#" class="align">Hombre<i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="camisetasHombre.html">Camisetas</a></li>
-                            <li><a href="pantalonesHombre.html">Pantalones</a></li>
-                            <li><a href="chaquetasHombre.html">Chaquetas</a></li>
-                            <li><a href="bañadoresHombre.html">Bañadores</a></li>
-                            <li><a href="complementosHombre.html">Complementos</a></li>
+                            <li><a href="camisetasHombre.php">Camisetas</a></li>
+                            <li><a href="pantalonesHombre.php">Pantalones</a></li>
+                            <li><a href="chaquetasHombre.php">Chaquetas</a></li>
+                            <li><a href="bañadoresHombre.php">Bañadores</a></li>
+                            <li><a href="complementosHombre.php">Complementos</a></li>
                             
                         </ul></li>
                     <li><a href="#" class="align">Mujer<i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="camisetasMujer.html">Camisetas</a></li>
-                            <li><a href="pantalonesMujer.html">Pantalones</a></li>
-                            <li><a href="chaquetasMujer.html">Chaquetas</a></li>
-                            <li><a href="bikinisMujer.html">Bikinis</a></li>
-                            <li><a href="complementosMujer.html">Complementos</a></li>
+                            <li><a href="camisetasMujer.php">Camisetas</a></li>
+                            <li><a href="pantalonesMujer.php">Pantalones</a></li>
+                            <li><a href="chaquetasMujer.php">Chaquetas</a></li>
+                            <li><a href="bikinisMujer.php">Bikinis</a></li>
+                            <li><a href="complementosMujer.php">Complementos</a></li>
                         </ul></li>
-                    <li><a href="carrito.html">Carrito</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="carrito.php">Carrito</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="login.php">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-        <h1 class="camisetastitulo">Pantalones</h1>
+        <h1 class="camisetastitulo">Bañadores</h1>
         <div class="center-camisetas">
-            <div id="pantalonesMujerId" class="camisetas">
-     
+            <div id="bikinisMujerId" class="camisetas">                      
             </div>
         </div>
+        
 <footer>
     <div class="footer-img">
         <img src="images/instagram.png" alt="instagram" class="instagram">
@@ -61,7 +62,7 @@
     </div>
     <div class="footer-bottom">
         <div class="footer-terms">
-            <a href="contacto.html">Contacto</a>
+            <a href="contacto.php">Contacto</a>
             <a href="#">Términos y condiciones</a>
         </div>
 
@@ -80,10 +81,10 @@
             //cargarCatalogo(1,fila)
         } else {
             fila = 2
-            getDatos(7,fila)
+            getDatos(9,fila)
             //cargarCatalogo(1,fila)
         }
-        getDatos(7,fila)
+        getDatos(9,fila)
         interval = setInterval(getDatos, 10000, 1,fila)
     }
 
@@ -95,7 +96,7 @@
             fila = 1     
             //cargarCatalogo(1,fila)
         }
-        getDatos(7,fila)
+        getDatos(9,fila)
         interval = setInterval(getDatos, 1,1,fila)
     }
     
@@ -107,4 +108,4 @@
     y.addListener(myFunctionY)   
 </script>
 </body>
-</html>
+</html>';

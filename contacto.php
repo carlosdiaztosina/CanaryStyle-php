@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+echo'
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,10 +13,10 @@
     <header>
         <div class="nav-wrap">
             <div class="nav-block"></div>
-            <a href="index.html">
+            <a href="index.php">
                 <img src="images/Captura111.PNG" alt="logo" class="logo">
             </a>
-            <a href="index.html" class="logo-name">
+            <a href="index.php" class="logo-name">
                 CanaryStyle
             </a>
             <nav>
@@ -37,9 +38,9 @@
                             <li><a href="">Bikinis</a></li>
                             <li><a href="">Complementos</a></li>
                         </ul></li>
-                    <li><a href="carrito.html">Carrito</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="carrito.php">Carrito</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="login.php">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -87,7 +88,7 @@
     </div>
     <div class="footer-bottom">
         <div class="footer-terms">
-            <a href="contacto.html">Contacto</a>
+            <a href="contacto.php">Contacto</a>
             <a href="#">Términos y condiciones</a>
         </div>
 
@@ -96,4 +97,4 @@
         </div>
     </div>
 </footer>
-</html>
+</html>';
