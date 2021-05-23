@@ -1,5 +1,5 @@
 <?php
-    include_once 'busines.class.php'; 
+    include_once 'business.class.php'; 
 
     if(USER::getLoggedUser() != false){
         echo "<h3>Error, sesión ya iniciada</h3>";

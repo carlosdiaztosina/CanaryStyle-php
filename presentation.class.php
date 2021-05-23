@@ -1,5 +1,5 @@
 <?php
-include_once 'busines.class.php';
+include_once 'business.class.php';
 class View{
     public static function  start($title){
         $html = "<!DOCTYPE html>
