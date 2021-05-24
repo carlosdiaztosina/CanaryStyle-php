@@ -9,21 +9,27 @@ $res = $datos-> fetchAll();
 
 View::navigation();
 
-echo "<table>
+echo "<table class='table'>
+        <thead class='thead-dark'>
         <tr>
             <th> Cuenta </th>
             <th> Nombre </th>
-        </tr>";
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>";
 
 foreach($res as $usuarios){
 
     echo "<tr id='{$usuarios['id']}'>
-            <th> {$usuarios['cuenta']} </th>
-            <th> {$usuarios['nombre']} </th>
-            <th><input type='button' onclick='editarUsuarios({$usuarios['id']})' value='Editar'></th>
-            <th><input type='button' onclick='borrarUsuarios({$usuarios['id']})' value='Eliminar'></th>
+            <td> {$usuarios['cuenta']} </td>
+            <td> {$usuarios['nombre']} </td>
+            <td><input type='button' onclick='editarUsuarios({$usuarios['id']})' value='Editar'></td>
+            <td><input type='button' onclick='borrarUsuarios({$usuarios['id']})' value='Eliminar'></td>
         </tr>";
 }
 
-echo"</table>
+echo"</tbody>
+    </table>
     <a href='nuevoUsuario.php'><input type='button' value='Nuevo usuario'></a>";

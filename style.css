@@ -589,3 +589,24 @@ p:hover > a:hover {
 .letras-perfil{
     font-size: 20px;
 }
+
+.camisetas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+
+    /*
+        Para hacerlo responsive tienes que jugar con grid-template-columns: auto auto auto; quitandole autos
+        Si pones auto auto es 2 columnas
+        OKEY NENE 
+        XDespera
+    */
+}
+
+/* Galaxy Fold hasta 1024 */
+@media only screen and (min-width : 280px) and (max-width : 1024px) {
+    .camisetas{
+        grid-template-columns: auto;
+    }
+}
