@@ -4,7 +4,7 @@ include_once 'data-access.class.php';
 
 View::start("Canary Styles | Perfil ");
 
-$datos = DB::execute_sql("SELECT * FROM usuarios");
+$datos = DB::execute_sql('SELECT * FROM usuarios');
 $res = $datos-> fetchAll();
 
 View::navigation();
@@ -25,7 +25,13 @@ foreach($res as $usuarios){
     echo "<tr id='{$usuarios['id']}'>
             <td> {$usuarios['cuenta']} </td>
             <td> {$usuarios['nombre']} </td>
-            <td><input type='button' onclick='editarUsuarios({$usuarios['id']})' value='Editar'></td>
+
+            <td>
+            <form method='POST' action='editarUsuarios.php'>
+            <input type='hidden' name='idusuario' value='{$usuarios['id']}'>
+            <input type='submit' value='Editar'>
+            </form>
+            </td>
             <td><input type='button' onclick='borrarUsuarios({$usuarios['id']})' value='Eliminar'></td>
         </tr>";
 }
