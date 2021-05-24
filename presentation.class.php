@@ -66,17 +66,14 @@ class View {
         if($user == false) {
             echo '<li><a href="login.php">Login</a></li>';
             echo "<li><a></a></li>";
-            echo "<li><a></a></li>";
-            echo "<li><a></a></li>";
-            echo "<li><a></a></li>";
+            
         } else {
             echo "<li><a href='perfil.php'>Perfil</a></li>";
-            echo "<li><a href='logout.php'>Cerrar sesión</a></li>";
+            echo "<li><a href='logout.php'>Logout</a></li>";
             echo "<li><a></a></li>";
             echo "<li><a></a></li>";
             echo "<li><a></a></li>";
-            echo "<li><a></a></li>";
-           
+            
         }
         echo' </ul>
         </nav>
