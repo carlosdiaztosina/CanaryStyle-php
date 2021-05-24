@@ -157,3 +157,62 @@ function borrarArticulo(id) {
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.send("id="+id);
 }
+
+
+
+
+function borrarArticulos(idArticulo){
+    if(!confirm("¿Seguro que desea eliminar el articulo?")){
+        return;
+    }
+    postAjax("borrarArticulo.php", JSON.stringify({id: idArticulo}),
+    function(data){
+        res = JSON.parse(data);
+        if(res.deleted==true){
+            document.getElementById(idArticulo).remove();
+        }
+    });
+}
+
+function postAjax(url, params, success) {
+    
+    var ajax = new XMLHttpRequest();
+    ajax.open("POST",url);
+    ajax.onreadystatechange=function(){
+        if (ajax.readyState==4 && ajax.status==200){
+            success(ajax.responseText);
+        }
+    };
+    ajax.setRequestHeader("Content-type","application/json;charset=UTF-8");
+    ajax.send(params);
+    return ajax;
+}
+
+
+
+function borrarUsuarios(idUsuario){
+    if(!confirm("¿Seguro que desea eliminar al usuario?")){
+        return;
+    }
+    postAjax1("borrarUsuario.php", JSON.stringify({id: idUsuario}),
+    function(data){
+        res = JSON.parse(data);
+        if(res.deleted==true){
+            document.getElementById(idUsuario).remove();
+        }
+    });
+}
+
+function postAjax1(url, params, success) {
+    
+    var ajax = new XMLHttpRequest();
+    ajax.open("POST",url);
+    ajax.onreadystatechange=function(){
+        if (ajax.readyState==4 && ajax.status==200){
+            success(ajax.responseText);
+        }
+    };
+    ajax.setRequestHeader("Content-type","application/json;charset=UTF-8");
+    ajax.send(params);
+    return ajax;
+}

@@ -22,7 +22,7 @@ foreach($res as $articulo){
             <th> {$articulo['id']} </th>
             <th> {$articulo['nombre']} </th>
             <th> <a href='modificarA.php'><input type='button' value='Editar'></a></th>
-            <th> <input type='button' onclick='borrarArticulo({$articulo['id']})' value='Eliminar'></th>
+            <th> <input type='button' onclick='borrarArticulos({$articulo['id']})' value='Eliminar'></th>
         </tr>";
 }
 
