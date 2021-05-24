@@ -159,8 +159,6 @@ function borrarArticulo(id) {
 }
 
 
-
-
 function borrarArticulos(idArticulo){
     if(!confirm("¿Seguro que desea eliminar el articulo?")){
         return;
@@ -173,7 +171,6 @@ function borrarArticulos(idArticulo){
         }
     });
 }
-
 function postAjax(url, params, success) {
     
     var ajax = new XMLHttpRequest();
@@ -189,7 +186,6 @@ function postAjax(url, params, success) {
 }
 
 
-
 function borrarUsuarios(idUsuario){
     if(!confirm("¿Seguro que desea eliminar al usuario?")){
         return;
@@ -202,7 +198,6 @@ function borrarUsuarios(idUsuario){
         }
     });
 }
-
 function postAjax1(url, params, success) {
     
     var ajax = new XMLHttpRequest();
