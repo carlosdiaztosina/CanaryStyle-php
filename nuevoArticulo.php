@@ -7,8 +7,7 @@ View::start("Canary Styles | Perfil ");
 View::navigation();
 
 echo "<div class='wrapper-contacto'>
-            <form action='añadirArticulo.php' mehtod='POST'>
-                <p><input type='text' name='id' placeholder='Crear id'></p>
+            <form action='añadirArticulo.php' method='POST'>
                 <p><input type='text' name='nombre' placeholder='Crear nombre'></p>
                 <p><input type='text' name='precio' placeholder='Crear precio'></p>
                 <p><input type='input' name='tipo' placeholder='Crear tipo'></p>
