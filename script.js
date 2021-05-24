@@ -190,7 +190,7 @@ function postAjax(url, params, success) {
 
 
 
-function borrarUsuarios(idUsuario){
+function borrarusuarios(idUsuario){
     if(!confirm("¿Seguro que desea eliminar al usuario?")){
         return;
     }
