@@ -12,7 +12,7 @@ echo "<div class='wrapper-contacto'>
                 <p><input type='text' name='nombre' placeholder='Crear nombre'></p>
                 <p><input type='text' name='precio' placeholder='Crear precio'></p>
                 <p><input type='input' name='tipo' placeholder='Crear tipo'></p>
-                <p><input type='file' name='nombre' placeholder='Archivo a subir'></p>
+                <p><input type='file' name='imagen' placeholder='Archivo a subir'></p>
                 <input type='submit' value='Crear Articulo'>
 
             </form>";
