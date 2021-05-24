@@ -16,30 +16,28 @@ echo'
 <body>';
 View::navigation();
 $datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=4');
-    echo '<h1 class="camisetastitulo">Camisetas</h1>
+    echo '<h1 class="camisetastitulo">Bañadores</h1>
         <div class="center-camisetas">
-            <div class="row">';
-        $count = 1;
-
-        foreach($datos as $camisetashombre){
-            echo '<div class="camisetas">
-                <div class="col">
-                    <div class="main-camiseta" >';
-                    $img=View::imgtobase64($camisetashombre['imagen']);
-                    echo "<img  src='$img' alt='camisetas-img1' /> ";  
+            <div class="camisetas">';
+        foreach($datos as $bañadoreshombre){
+            $id = $bañadoreshombre['id'];
+            echo '<div class="">';
+            echo '<div class="">';  // Esto ya lo fixeas si ta VIVA RUSIA ?DONDE TIENES EL CSS?
+                    echo "<div class='main-camiseta' onclick=\"window.location='camisetaHombre.php?id=$id'\">";
+                        $img=View::imgtobase64($bañadoreshombre['imagen']);
+                        echo "<img  src='$img' alt='camisetas-img1' /> ";                          
                         echo ' <div class="row marginsetup">
                             <div class="col-8">';
-                            echo "<p class='camiseta-title camiseta-text'>{$camisetashombre['nombre']}</p>";
+                            echo "<p class='camiseta-title camiseta-text'>{$bañadoreshombre['nombre']}</p>";
                             echo '</div>
                             <div class="col-4">';
-                                echo "<p class='camiseta-price camiseta-text'>{$camisetashombre['precio']}€</p>";
+                                echo "<p class='camiseta-price camiseta-text'>{$bañadoreshombre['precio']}€</p>";
                                 echo '
                             </div>
                         </div>     
                     </div>
                 </div>
             </div>';
-            $count++;
         }
         echo'
         </div>
