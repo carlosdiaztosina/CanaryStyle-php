@@ -134,3 +134,26 @@ function cargarJSON(json,show,max){
     }
     
 }
+
+
+const boton = document.getElementById("botonBorrar");
+
+if(boton != null){
+    
+    boton.addEventListener('click',borrarArticulo);
+
+}
+
+
+function borrarArticulo(id) {
+    const ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = function () {
+        if(ajax.readyState == 4 && (ajax.status >= 200 && ajax.status < 300)) {
+            const table = document.getElementById('tablaUsuarios');
+            table.innerHTML = ajax.responseText;
+        }
+    }
+    ajax.open('POST', 'borrarUsuario.php', true);
+    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajax.send("id="+id);
+}

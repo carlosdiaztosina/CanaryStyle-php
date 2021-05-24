@@ -7,9 +7,8 @@ $nombre = $_SESSION['user']['nombre'];
 
 View::navigation();
 
-echo "<h1 class='perfil'> Bienvenido {$nombre} </h1>
-        <div class='wrapper-contacto'>
-            <form action='modificarCuenta.php' mehtod='POST'>
+echo"<div class='wrapper-contacto'>
+            <form action='modificarCuenta.php' method='POST'>
                 <p><input type='text' name='cuenta' placeholder='Cambiar cuenta'></p>
                 <p><input type='text' name='nombre' placeholder='Cambiar nombre'></p>
                 <p><input type='email' name='email' placeholder='Cambiar email'></p>

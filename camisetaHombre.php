@@ -13,7 +13,8 @@ echo '
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <title>CanaryStyle</title>
+    <title>CanaryStyle</title>';
+    /*
     <script>
         $(document).ready(function () {
             var id = new URLSearchParams(window.location.search);
@@ -21,38 +22,76 @@ echo '
             //cargarProducto(10,0,id.get("id"));
         });
     </script>
+    */
+    View::navigation();
+    $idArticulo=$_GET['id'];
+    $datosArticulo=DB::execute_sql('SELECT * FROM articulos WHERE articulos.id = ?',array($idArticulo));
+    
+    echo '
 </head>
 
-<body>';
-View::navigation();
-$datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=1');
-    echo '<h1 class="camisetastitulo">Camisetas</h1>
-        <div class="center-camisetas">
-            <div class="camisetas">';
-        $count = 1;
+<body>
+<h1 class="tituloproducto">Camiseta Tupac</h1>
+    <!-- Usamos bootstrap para el grid -->
+    <div class="row camiseta-row">
+        <div class="col camiseta-img">';
+        foreach($datosArticulo as $result){
+        
+            $img=View::imgtobase64($result['imagen']);
+            echo" <img src='$img' alt='amiseta1' />";
+            echo'</div>
+        <div class="col camiseta-data">
+            <div class="productosetup">
+            <form method="POST" action="añadirCarrito.php">
+                
+                    <p>Talla:</p>
+                    <select name="talla">
+                        <option value="1">S</option>
+                        <option value="2">M</option> 
+                        <option value="3">L</option>
+                        <option value="4">XL</option>  
+                    </select>
+                
+                
+                    <p>Cantidad: </p>
+                    <input type="number" name="cantidad" min="1" max="20" step="1" value="1">';
 
-        foreach($datos as $camisetashombre){
-            echo '<div class="row">
-                <div class="col">
-                    <div class="main-camiseta" >';
-                        echo "<img  src='images/FotosHombres/Camisetas/camiseta{$count}.jpg' alt='camisetas-img1' /> ";                          
-                        echo ' <div class="row marginsetup">
-                            <div class="col-8">';
-                            echo "<p class='camiseta-title camiseta-text'>{$camisetasHombre['nombre']}</p>";
-                            echo '</div>
-                            <div class="col-4">';
-                                echo "<p class='camiseta-price camiseta-text'>{$camisetasHombre['precio']}€</p>";
-                                echo '
-                            </div>
-                        </div>     
-                    </div>
-                </div>
-            </div>';
-            $count++;
+                   echo "<p>Precio:{$result['precio']}€</p>
+                   <input type='hidden' name='precio' value='{$result['precio']}'>
+                   <input type='hidden' name='id' value='{$result['id']}'>
+                   <input type='hidden' name='nombre' value='{$result['nombre']}'>";
+                  
+
+               echo"<input type='submit' value='Añadir al Carrito'>";
+               echo'</form>
+            </div>
+        </div>';
         }
-        echo'
+        
+       echo' 
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Los clientes también compran</p>
+            </div>
         </div>
+        <div class="row">
+            <div class="col hoverclientes">
+                <img src="images/FotosHombres/Pantalones/pantalon3.jpg" alt="pantalon-1">
+            </div>
+            <div class="col hoverclientes">
+                <img src="images/FotosHombres/Camisetas/camiseta4.jpg" alt="pizza-2">
+            </div>
+            <div class="col hoverclientes">
+                <img src="images/FotosMujeres/Sudaderas/sudadera1.jpg" alt="pizza-3">
+            </div>
         </div>
+    </div>
+
+    </div>
+
 
     <footer>
         <div class="footer-img">

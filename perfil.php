@@ -6,15 +6,16 @@ View::start("Canary Styles | Perfil ");
 
 $datos = DB::execute_sql("SELECT * FROM usuarios WHERE usuarios.id = ?", array($_SESSION['user']['id']));
 $res = $datos-> fetchAll();
-$nombre = $_SESSION['user']['nombre'];
+
 
 View::navigation();
 
-echo "<h1 class='perfil'> Bienvenido {$nombre} </h1>
-        <div class='wrapper-contacto'>
-            <section class='form1'>";
+
 
     foreach($res as $value){
+      echo "<h1 class='perfil'> Bienvenido {$value['nombre']} </h1>
+        <div class='wrapper-contacto'>
+            <section class='form1'>";
         echo "<div class='letras-perfil'>
               <label> Cuenta: {$value['cuenta']} </label>
             </div>
@@ -27,11 +28,11 @@ echo "<h1 class='perfil'> Bienvenido {$nombre} </h1>
             <div>
               <label> Direccion: {$value['direccion']} </label>
             </div>
-            <a href='modificar.php'><input type='button' value='Modificar datos'></a>";
+            <a href='modificar.php'><input type='button' value='Modificar datos'></a><br>";
     }
 
     if($_SESSION['user']['tipo'] == 0){
-        echo "<a href='gestionarUsuarios.php'><input type='button' value='Gestionar usuarios'></a>
+        echo "<a href='gestionarUsuarios.php'><input type='button' value='Gestionar usuarios'></a><br>
               <a href='gestionarArticulos.php'><input type='button'value='Gestionar articulos'></a>";
     }
 

@@ -20,11 +20,12 @@ $datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=1');
     echo '<h1 class="camisetastitulo">Camisetas</h1>
         <div class="center-camisetas">
             <div class="row">';
-        $count = 1;
+
         foreach($datos as $camisetashombre){
-            echo '<div class="camisetas">
-                <div class="col">
-                    <div class="main-camiseta" >';
+            $id = $camisetashombre['id'];
+            echo '<div class="camisetas">';
+            echo '<div class="col">';
+                    echo "<div class='main-camiseta' onclick=\"window.location='camisetaHombre.php?id=$id'\">";
                         $img=View::imgtobase64($camisetashombre['imagen']);
                         echo "<img  src='$img' alt='camisetas-img1' /> ";                          
                         echo ' <div class="row marginsetup">
@@ -39,7 +40,6 @@ $datos = DB::execute_sql('SELECT * FROM articulos WHERE tipo=1');
                     </div>
                 </div>
             </div>';
-            $count++;
         }
         echo'
         </div>

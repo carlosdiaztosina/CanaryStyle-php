@@ -21,7 +21,7 @@ foreach($res as $articulo){
     echo "<tr>
             <th> {$articulo['id']} </th>
             <th> {$articulo['nombre']} </th>
-            <th> Editar </th>
+            <th><input type='submit' name='' value='Editar'></th>
             <th> Borrar </th>
         </tr>";
 }

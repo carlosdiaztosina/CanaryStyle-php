@@ -388,7 +388,7 @@ p:hover > a:hover {
     box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.5);
 }
 
-.tamañoproducto > p, .masaproducto > p, .cantidadproducto > p, .precioproducto > p {
+.cantidadproducto > p, .precioproducto > p {
     margin: 1em 0 0 0;
     font-size: 32px;
 }
